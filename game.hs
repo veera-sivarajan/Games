@@ -25,15 +25,13 @@ gameLogic Scissor choice | choice == Rock = -1
                          | choice == Paper = 1
                          | choice == Scissor = 0
 
-main :: IO ()
-main = do putStrLn "ROCK, PAPER, SCISSOR"
-          read choice
-          read choice1
-          case (gameLogic choice choice1) of
-            1 -> putStrLn "Player wins"
-            -1 -> putStrLn "Computer wins"
-            0 -> putStrLn "Draw"
+options :: [Choice]
+options = [Rock, Paper, Scissor]
        
-
-
-
+main :: IO ()
+main = do putStrLn "Game Begins"
+          let result = gameLogic Rock Paper
+          let winner | result > 0 = putStrLn "Player1 wins"
+                     | result < 0 = putStrLn "Player2 wins"
+                     | otherwise  = putStrLn "Draw"
+          winner
