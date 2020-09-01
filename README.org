@@ -1,4 +1,3 @@
 #+TITLE: Small Exercises For Learning Haskell
-* Learning Haskell
-** Rock, Paper and Scissors
-Simple game using type, data and lists
+* Rock, Paper and Scissors
+Implemented using type, data and lists
