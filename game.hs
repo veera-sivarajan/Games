@@ -30,7 +30,7 @@ options = [Rock, Paper, Scissor]
        
 game :: Choice -> Choice -> IO ()
 game c1 c2 = do putStrLn "Game Begins"
-                let result = gameLogic c1 c2 
+            let result = gameLogic c1 c2 
                     winner  | result > 0 = putStrLn "Player1 wins"
                             | result < 0 = putStrLn "Player2 wins"
                             | otherwise  = putStrLn "Draw"
